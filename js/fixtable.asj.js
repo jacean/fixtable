@@ -12,7 +12,8 @@
         fixcol: "",
         fixrow: "",
         hidecol: "",
-        hiderow: ""
+        hiderow: "",
+        containerid:""
     };
     function px2num(pxnum) {
         return parseFloat(pxnum.slice(0, -2));
@@ -99,7 +100,7 @@
     }
     FixTable.prototype = {
         initDom: function () {
-            this.$tableContainer = $('<div class="table-container"></div>');
+           
             this.$tableContent = $('<div class="table-content"></div>');
             this.$table_attr_hide = $('<div class="table-attr-hide"></div>');
             this.$table_ctr_hide = $('<div class="table-ctrl-hide"></div>');
@@ -109,8 +110,14 @@
             this.$middle = $('<div class="table-middle"></div>');
 
             this.$middle.append(this.$tableleft).append(this.$tableContent);
+            if(this.options.containerid==""){
+                this.$tableContainer =$('<div class="table-container"></div>');
+                this.$table.after(this.$tableContainer);
+            }else{
+                this.$tableContainer =$("#"+this.options.containerid)
+            }
             this.$tableContainer.append(this.$header).append(this.$middle).append(this.$tablelt);
-            this.$table.after(this.$tableContainer);
+            
 
             this.initContainer(this.options.customwidth, this.options.height);
 
@@ -221,14 +228,12 @@
             this.$tableleft.css({ left: 0 + 'px', top: this.point.y + 'px' });
             this.$tableContent.css({ left: this.point.x + 'px', top: this.point.y + 'px' });
             this.$tablelt.css({ left: 0, top: 0 });
+
             this.$tablelt.width(this.point.x);
             this.$tableleft.width(this.point.x);
-            //滚动条处理
-            //clientHeight，可视区
-            //offsetHeight,带滚动条的实战区
-            //var scrollStatus = hasScroll($tableContent[0]);            
-            //scroll会扩展自身宽高,所以不用再调整scroll的宽高来对准point
+            this.$tableContent.width(this.$tableContainer.width()-this.point.x);
             this.$header.width(this.$tableContent[0].clientWidth);
+
             this.$tableleft.height(this.$tableContent[0].clientHeight);
 
         },
@@ -342,10 +347,11 @@
                 // var fixwidth = px2num($fixcol.css('width'));
                 this.$tableleft.css('width', (leftwidth + fixwidth));//先保持为原本的为填充数据状态
                 this.$tableleft.append($fixcol);//直接迁移，不复制
-                this.$tableContent.width(this.$tableContainer.width() - this.$tableleft.width());
-                // this.$tableleft.height(this.$tableContent.height());
                 this.point.x += $fixcol.width();
-                this.$tablelt.width(this.$tablelt.width() + $fixcol.width());
+                this.$tableContent.width(this.$tableContainer.width() - this.point.x);
+                // this.$tableleft.height(this.$tableContent.height());
+                
+                this.$tablelt.width(this.point.x);
             }
             this.fixselector.col = cols;
             this.removemix(this.fixselector);

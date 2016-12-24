@@ -1,0 +1,1285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <meta charset="UTF-8">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+<script language=javascript src="../lib/jquery-1.3.2.js"></script>
+<!--<script language=javascript src="jquery-3.1.0.min.js"></script>-->
+<link rel="stylesheet" href="../css/JupiterBoot.css">
+<link rel="stylesheet" href="../css/fixtable.css">
+<script src="../js/fixtable.asj.js"></script>
+<script>
+var VARIABLE;
+//      $(document).ready(function () {
+//            
+//            initfixtable();
+//      });
+      
+      function initfixtable(){
+            VARIABLE=$("#jTbl_D_GRID").fixtable({
+                  customwidth: 350,
+                  customHeight: 600,
+                  // fixcol: ["XZXL", "YQWCRQ"]
+                  // hidecol: ["TCR","ZT"],
+                  //                  hiderow: "jDGROW_0",
+                  containerid:"aa"
+            });
+      }
+      function setSize(w,h) {
+            // VARIABLE.setContainerSize(200, 200)
+             VARIABLE.setContainerSize(w, h)
+      }
+      function fixcol(id) {
+            // VARIABLE.fixcols("SGDW")
+            VARIABLE.fixcols(id)
+      }
+      function hiderow(id) {
+            // VARIABLE.hiderow("jDGROW_2")
+            VARIABLE.hiderow(id)
+      }
+      function hidecol(id) {
+
+            // VARIABLE.hidecol("SGDW")
+            VARIABLE.hidecol(id)
+      }
+      function hidecell(row, col) {
+            VARIABLE.hidecell("jDGROW_2","SGDW")
+      }
+      function removehidecell(){
+            VARIABLE.removehidecell();
+      }
+      
+</script>
+ <BODY>
+
+<table width="100%" height=100% border="1">
+	<tr>
+		<td width="10%">&nbsp;</td>
+		<td width="80%">
+ <input type="button" value="Init" onclick="initfixtable();">
+ <input type="button" value="Fix Col" onclick="fixcol('SGDW');">
+ <input type="button" value="Hide Col" onclick="hidecol('SGDW');">
+ <input type="button" value="Hide Cell" onclick="hidecell('jDGROW_2','SGDW');">
+ <input type="button" value="UnHide Cell" onclick="removehidecell();">
+ <input type="button" value="Resize" onclick="setSize(800,600);">		
+		</td>
+            <div id="aa"></div>
+		<td width="10%">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="10%">&nbsp;</td>
+		<td width="80%" height="100%" valign="top">
+            <div>
+	   <!--del:第一列空列-->
+  <table id="jTbl_D_GRID" class="grid"  >
+            <colgroup>
+         <col id="jD_GRIDCol_GCXM" jWidth="300"/>
+         <col id="jD_GRIDCol_SGDW" jWidth="100">
+         <col id="jD_GRIDCol_TCR" jWidth="100">
+         <col id="jD_GRIDCol_JCDW" jWidth="100">
+         <col id="jD_GRIDCol_YQWCRQ" jWidth="100">
+         <col id="jD_GRIDCol_JCSJ" jWidth="100">
+		 <col id="jD_GRIDCol_ZT" jWidth="100">
+         <col id="jD_GRIDCol_XZDL" jWidth="100">
+         <col id="jD_GRIDCol_XZXL" jWidth="100">
+         
+         </colgroup><thead>
+            <tr class="RowEven">
+               
+            <th id="jDTH_GCXM"><a href="#" onclick="setSS('sort.GCXM');return false;">工程项目</a></th>
+            <th id="jDTH_SGDW"><a href="#" onclick="setSS('sort.SGDW');return false;">施工单位</a></th>
+            <th id="jDTH_TCR"><a href="#" onclick="setSS('sort.TCR');return false;">提出人员</a></th>
+            <th id="jDTH_JCDW"><a href="#" onclick="setSS('sort.JCDW');return false;">检查单位</a></th>
+            <th id="jDTH_YQWCRQ"><a href="#" onclick="setSS('sort.YQWCRQ');return false;">要求完成日期</a></th>
+            <th id="jDTH_JCSJ"><a href="#" onclick="setSS('sort.JCSJ');return false;">检查时间</a></th>
+			<th id="jDTH_ZT"><a href="#" onclick="setSS('sort.ZT');return false;">状态</a></th>
+            <th id="jDTH_XZDL"><a href="#" onclick="setSS('sort.XZDL');return false;">大类</a></th>
+            <th id="jDTH_XZXL"><a href="#" onclick="setSS('sort.XZXL');return false;">小类</a></th>
+            
+            </tr>
+         </thead>
+         <tbody>
+      
+            <tr id="jDGROW_0" style="" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(0, 'DGRID');">
+<!-- Grid Controls Start -->
+              </div>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(0, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_0" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="1207项目整改方案001号">1207项目整改方案001号</a></td>
+         <td ><span id="jDG_SGDW_0" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连工大">大连工大0</span></td>
+         <td ><span id="jDG_TCR_0" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="董彬">董彬</span></td>
+         <td ><span id="jDG_JCDW_0" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="建设九局">建设九局</span></td>
+         <td ><span id="jDG_YQWCRQ_0" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-12-31">2016-12-31</span></td>
+         <td ><span id="jDG_JCSJ_0" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-12-25">2016-12-25</span></td>
+		  <td ><span id="jDG_ZT_0" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="审批中">审批中</span></td>
+         <td ><span id="jDG_XZDL_0" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="建设类别">建设类别</span></td>
+         <td ><span id="jDG_XZXL_0" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="下水类别">下水类别</span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td style=""><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_0" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="ZGT0001139">ZGT0001139</span>
+			   <span  id="jDG_ZGNR_0" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="施工单位改为大连建设二局">施工单位改为大连建设二局</span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_1" style="" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(1, 'DGRID');">
+<!-- Grid Controls Start -->
+               
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(1, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_1" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连市政工程地铁10号线跨兴工街段污水管线工程">大连市政工程地铁10号线跨兴工街段污水管线工程</a></td>
+         <td ><span id="jDG_SGDW_1" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="南通三建">南通三建1</span></td>
+         <td ><span id="jDG_TCR_1" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="徐思琦">徐思琦</span></td>
+         <td ><span id="jDG_JCDW_1" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大工监理大连">大工监理大连</span></td>
+         <td ><span id="jDG_YQWCRQ_1" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-30">2016-11-30</span></td>
+         <td ><span id="jDG_JCSJ_1" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-18">2016-11-18</span></td>
+		  <td ><span id="jDG_ZT_1" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="通过">通过</span></td>
+         <td ><span id="jDG_XZDL_1" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="给水排水工程">给水排水工程</span></td>
+         <td ><span id="jDG_XZXL_1" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="污水">污水</span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_1" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="ZGT0001089">ZGT0001089</span>
+			   <span  id="jDG_ZGNR_1" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="污水管埋深过深！">污水管埋深过深！</span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_2" style="" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(2, 'DGRID');">
+<!-- Grid Controls Start -->
+              
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(2, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_2" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连市政工程地铁10号线跨兴工街段污水管线工程">大连市政工程地铁10号线跨兴工街段污水管线工程</a></td>
+         <td ><span id="jDG_SGDW_2" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连">大连2</span></td>
+         <td ><span id="jDG_TCR_2" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="莊明">莊明</span></td>
+         <td ><span id="jDG_JCDW_2" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连">大连</span></td>
+         <td ><span id="jDG_YQWCRQ_2" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-30">2016-11-30</span></td>
+         <td ><span id="jDG_JCSJ_2" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-17">2016-11-17</span></td>
+		  <td ><span id="jDG_ZT_2" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="审批中">审批中</span></td>
+         <td ><span id="jDG_XZDL_2" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="建筑工程">建筑工程</span></td>
+         <td ><span id="jDG_XZXL_2" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="土建">土建</span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_2" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="ZGT0001088">ZGT0001088</span>
+			   <span  id="jDG_ZGNR_2" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="路">路</span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_3" style="" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(3, 'DGRID');">
+<!-- Grid Controls Start -->
+             
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(3, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_3" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连市政工程地铁10号线跨兴工街段污水管线工程">大连市政工程地铁10号线跨兴工街段污水管线工程</a></td>
+         <td ><span id="jDG_SGDW_3" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连">大连3</span></td>
+         <td ><span id="jDG_TCR_3" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="莊明">莊明</span></td>
+         <td ><span id="jDG_JCDW_3" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连船厂大连船厂大连船厂大连船厂大连地铁建设指挥部">大连船厂大连船厂大连船厂大连船厂大连地铁建设指挥部</span></td>
+         <td ><span id="jDG_YQWCRQ_3" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-30">2016-11-30</span></td>
+         <td ><span id="jDG_JCSJ_3" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-10">2016-11-10</span></td>
+		  <td ><span id="jDG_ZT_3" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="通过">通过</span></td>
+         <td ><span id="jDG_XZDL_3" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="管件">管件</span></td>
+         <td ><span id="jDG_XZXL_3" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="水管">水管</span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_3" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="ZGT0001056">ZGT0001056</span>
+			   <span  id="jDG_ZGNR_3" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="土木">土木</span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_4" style="" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(4, 'DGRID');">
+<!-- Grid Controls Start -->
+             
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(4, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_4" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连市政工程地铁10号线跨兴工街段污水管线工程">大连市政工程地铁10号线跨兴工街段污水管线工程</a></td>
+         <td ><span id="jDG_SGDW_4" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="南通三建">南通三建</span></td>
+         <td ><span id="jDG_TCR_4" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="徐思琦">徐思琦</span></td>
+         <td ><span id="jDG_JCDW_4" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大工">大工</span></td>
+         <td ><span id="jDG_YQWCRQ_4" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-30">2016-11-30</span></td>
+         <td ><span id="jDG_JCSJ_4" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-09">2016-11-09</span></td>
+		  <td ><span id="jDG_ZT_4" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="Z">Z</span></td>
+         <td ><span id="jDG_XZDL_4" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="给水排水工程">给水排水工程</span></td>
+         <td ><span id="jDG_XZXL_4" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="污水">污水</span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_4" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="ZGT0001046">ZGT0001046</span>
+			   <span  id="jDG_ZGNR_4" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="污水管线埋深过深！">污水管线埋深过深！</span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_5" style="" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(5, 'DGRID');">
+<!-- Grid Controls Start -->
+              
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(5, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_5" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连市政工程地铁10号线跨兴工街段污水管线工程">大连市政工程地铁10号线跨兴工街段污水管线工程</a></td>
+         <td ><span id="jDG_SGDW_5" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连大工大连理工大连理工">大连大工大连理工大连理工</span></td>
+         <td ><span id="jDG_TCR_5" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="莊明">莊明</span></td>
+         <td ><span id="jDG_JCDW_5" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连船厂大连船厂大连地铁建设指挥部大连船厂大连地铁建设指挥部">大连船厂大连船厂大连地铁建设指挥部大连船厂大连地铁建设指挥部</span></td>
+         <td ><span id="jDG_YQWCRQ_5" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-26">2016-11-26</span></td>
+         <td ><span id="jDG_JCSJ_5" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-09">2016-11-09</span></td>
+		  <td ><span id="jDG_ZT_5" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="通过">通过</span></td>
+         <td ><span id="jDG_XZDL_5" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="管件">管件</span></td>
+         <td ><span id="jDG_XZXL_5" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="水管">水管</span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_5" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="ZGT0001052">ZGT0001052</span>
+			   <span  id="jDG_ZGNR_5" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="电">电</span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_6" style="" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(6, 'DGRID');">
+<!-- Grid Controls Start -->
+               
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(6, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_6" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连市政工程地铁10号线跨兴工街段污水管线工程">大连市政工程地铁10号线跨兴工街段污水管线工程</a></td>
+         <td ><span id="jDG_SGDW_6" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连理工">大连理工</span></td>
+         <td ><span id="jDG_TCR_6" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="董彬">董彬</span></td>
+         <td ><span id="jDG_JCDW_6" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连船厂大连地铁建设指挥部">大连船厂大连地铁建设指挥部</span></td>
+         <td ><span id="jDG_YQWCRQ_6" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-10">2016-11-10</span></td>
+         <td ><span id="jDG_JCSJ_6" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-08">2016-11-08</span></td>
+		  <td ><span id="jDG_ZT_6" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="Z">Z</span></td>
+         <td ><span id="jDG_XZDL_6" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="建筑工程">建筑工程</span></td>
+         <td ><span id="jDG_XZXL_6" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="土建">土建</span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_6" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="ZGT0000992">ZGT0000992</span>
+			   <span  id="jDG_ZGNR_6" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="地址变更">地址变更</span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_7" style="" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(7, 'DGRID');">
+<!-- Grid Controls Start -->
+             
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(7, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_7" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连地铁建设施工6号线">大连地铁建设施工6号线</a></td>
+         <td ><span id="jDG_SGDW_7" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连大工大连理工">大连大工大连理工</span></td>
+         <td ><span id="jDG_TCR_7" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="莊明">莊明</span></td>
+         <td ><span id="jDG_JCDW_7" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连船厂大连地铁建设指挥部大连地铁建设指挥部">大连船厂大连地铁建设指挥部大连地铁建设指挥部</span></td>
+         <td ><span id="jDG_YQWCRQ_7" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-26">2016-11-26</span></td>
+         <td ><span id="jDG_JCSJ_7" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-08">2016-11-08</span></td>
+		  <td ><span id="jDG_ZT_7" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="Z">Z</span></td>
+         <td ><span id="jDG_XZDL_7" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="管件">管件</span></td>
+         <td ><span id="jDG_XZXL_7" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="水管">水管</span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_7" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="ZGT0001041">ZGT0001041</span>
+			   <span  id="jDG_ZGNR_7" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="水">水</span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_8" style="" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(8, 'DGRID');">
+<!-- Grid Controls Start -->
+             
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(8, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_8" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连市政工程地铁10号线跨兴工街段污水管线工程">大连市政工程地铁10号线跨兴工街段污水管线工程</a></td>
+         <td ><span id="jDG_SGDW_8" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连大工大连大工大连理工">大连大工大连大工大连理工</span></td>
+         <td ><span id="jDG_TCR_8" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="莊明">莊明</span></td>
+         <td ><span id="jDG_JCDW_8" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连船厂大连船厂大连船厂大连地铁建设指挥部">大连船厂大连船厂大连船厂大连地铁建设指挥部</span></td>
+         <td ><span id="jDG_YQWCRQ_8" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-26">2016-11-26</span></td>
+         <td ><span id="jDG_JCSJ_8" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-08">2016-11-08</span></td>
+		  <td ><span id="jDG_ZT_8" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="Z">Z</span></td>
+         <td ><span id="jDG_XZDL_8" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="管件">管件</span></td>
+         <td ><span id="jDG_XZXL_8" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="水管">水管</span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_8" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="ZGT0001043">ZGT0001043</span>
+			   <span  id="jDG_ZGNR_8" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="水">水</span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_9" style="" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(9, 'DGRID');">
+<!-- Grid Controls Start -->
+            
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(9, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_9" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连地铁建设施工6号线">大连地铁建设施工6号线</a></td>
+         <td ><span id="jDG_SGDW_9" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连">大连</span></td>
+         <td ><span id="jDG_TCR_9" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="莊明">莊明</span></td>
+         <td ><span id="jDG_JCDW_9" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="大连船厂大连船厂大连地铁建设指挥部">大连船厂大连船厂大连地铁建设指挥部</span></td>
+         <td ><span id="jDG_YQWCRQ_9" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-26">2016-11-26</span></td>
+         <td ><span id="jDG_JCSJ_9" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="2016-11-07">2016-11-07</span></td>
+		  <td ><span id="jDG_ZT_9" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="Z">Z</span></td>
+         <td ><span id="jDG_XZDL_9" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="建设">建设</span></td>
+         <td ><span id="jDG_XZXL_9" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="路面">路面</span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_9" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="ZGT0001040">ZGT0001040</span>
+			   <span  id="jDG_ZGNR_9" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="水">水</span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_10" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(10, 'DGRID');">
+<!-- Grid Controls Start -->
+             
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(10, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_10" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_10" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_10" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_10" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_10" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_10" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_10" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_10" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_10" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_10" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_10" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_11" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(11, 'DGRID');">
+<!-- Grid Controls Start -->
+              
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(11, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_11" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_11" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_11" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_11" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_11" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_11" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_11" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_11" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_11" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_11" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_11" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_12" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(12, 'DGRID');">
+<!-- Grid Controls Start -->
+              
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(12, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_12" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_12" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_12" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_12" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_12" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_12" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_12" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_12" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_12" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_12" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_12" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_13" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(13, 'DGRID');">
+<!-- Grid Controls Start -->
+             
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(13, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_13" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_13" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_13" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_13" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_13" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_13" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_13" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_13" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_13" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_13" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_13" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_14" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(14, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_14" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(14, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_14" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_14" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_14" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_14" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_14" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_14" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_14" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_14" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_14" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_14" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_14" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_15" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(15, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_15" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(15, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_15" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_15" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_15" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_15" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_15" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_15" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_15" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_15" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_15" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_15" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_15" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_16" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(16, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_16" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(16, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_16" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_16" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_16" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_16" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_16" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_16" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_16" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_16" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_16" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_16" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_16" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_17" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(17, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_17" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(17, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_17" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_17" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_17" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_17" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_17" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_17" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_17" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_17" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_17" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_17" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_17" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_18" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(18, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_18" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(18, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_18" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_18" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_18" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_18" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_18" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_18" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_18" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_18" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_18" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_18" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_18" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_19" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(19, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_19" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(19, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_19" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_19" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_19" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_19" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_19" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_19" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_19" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_19" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_19" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_19" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_19" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_20" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(20, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_20" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(20, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_20" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_20" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_20" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_20" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_20" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_20" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_20" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_20" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_20" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_20" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_20" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_21" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(21, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_21" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(21, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_21" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_21" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_21" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_21" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_21" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_21" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_21" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_21" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_21" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_21" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_21" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_22" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(22, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_22" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(22, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_22" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_22" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_22" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_22" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_22" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_22" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_22" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_22" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_22" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_22" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_22" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_23" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(23, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_23" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(23, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_23" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_23" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_23" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_23" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_23" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_23" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_23" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_23" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_23" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_23" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_23" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_24" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(24, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_24" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(24, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_24" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_24" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_24" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_24" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_24" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_24" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_24" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_24" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_24" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_24" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_24" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_25" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(25, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_25" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(25, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_25" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_25" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_25" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_25" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_25" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_25" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_25" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_25" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_25" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_25" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_25" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_26" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(26, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_26" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(26, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_26" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_26" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_26" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_26" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_26" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_26" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_26" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_26" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_26" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_26" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_26" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_27" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(27, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_27" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(27, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_27" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_27" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_27" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_27" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_27" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_27" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_27" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_27" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_27" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_27" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_27" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_28" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(28, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_28" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(28, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_28" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_28" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_28" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_28" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_28" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_28" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_28" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_28" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_28" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_28" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_28" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_29" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(29, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_29" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(29, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_29" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_29" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_29" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_29" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_29" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_29" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_29" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_29" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_29" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_29" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_29" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_30" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(30, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_30" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(30, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_30" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_30" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_30" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_30" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_30" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_30" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_30" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_30" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_30" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_30" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_30" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_31" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(31, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_31" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(31, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_31" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_31" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_31" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_31" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_31" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_31" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_31" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_31" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_31" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_31" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_31" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_32" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(32, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_32" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(32, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_32" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_32" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_32" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_32" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_32" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_32" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_32" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_32" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_32" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_32" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_32" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_33" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(33, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_33" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(33, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_33" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_33" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_33" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_33" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_33" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_33" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_33" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_33" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_33" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_33" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_33" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_34" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(34, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_34" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(34, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_34" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_34" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_34" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_34" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_34" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_34" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_34" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_34" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_34" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_34" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_34" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_35" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(35, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_35" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(35, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_35" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_35" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_35" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_35" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_35" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_35" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_35" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_35" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_35" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_35" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_35" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_36" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(36, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_36" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(36, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_36" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_36" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_36" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_36" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_36" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_36" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_36" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_36" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_36" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_36" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_36" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_37" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(37, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_37" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(37, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_37" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_37" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_37" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_37" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_37" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_37" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_37" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_37" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_37" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_37" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_37" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_38" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(38, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_38" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(38, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_38" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_38" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_38" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_38" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_38" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_38" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_38" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_38" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_38" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_38" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_38" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_39" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(39, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_39" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(39, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_39" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_39" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_39" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_39" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_39" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_39" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_39" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_39" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_39" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_39" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_39" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_40" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(40, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_40" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(40, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_40" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_40" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_40" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_40" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_40" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_40" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_40" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_40" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_40" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_40" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_40" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_41" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(41, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_41" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(41, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_41" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_41" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_41" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_41" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_41" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_41" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_41" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_41" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_41" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_41" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_41" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_42" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(42, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_42" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(42, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_42" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_42" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_42" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_42" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_42" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_42" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_42" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_42" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_42" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_42" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_42" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_43" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(43, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_43" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(43, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_43" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_43" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_43" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_43" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_43" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_43" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_43" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_43" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_43" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_43" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_43" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_44" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(44, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_44" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(44, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_44" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_44" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_44" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_44" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_44" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_44" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_44" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_44" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_44" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_44" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_44" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_45" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(45, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_45" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(45, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_45" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_45" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_45" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_45" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_45" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_45" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_45" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_45" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_45" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_45" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_45" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_46" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(46, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_46" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(46, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_46" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_46" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_46" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_46" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_46" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_46" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_46" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_46" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_46" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_46" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_46" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_47" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(47, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_47" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(47, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_47" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_47" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_47" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_47" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_47" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_47" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_47" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_47" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_47" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_47" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_47" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_48" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(48, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_48" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(48, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_48" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_48" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_48" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_48" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_48" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_48" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_48" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_48" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_48" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_48" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_48" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+            <tr id="jDGROW_49" style="display:none" class="9mainbody RowOdd" onmousedown="javascript:jContextMenu(49, 'DGRID');">
+<!-- Grid Controls Start -->
+               <td ><input id="jRowSeq_49" value="" type="hidden"></td>
+      <td ><a href="#" onclick="javascript:SetRow_jDGRID(49, 'DATA.GCXM.CLICK');return false;" id="jDG_GCXM_49" style="width: 266px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></a></td>
+         <td ><span id="jDG_SGDW_49" style="width: 144px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_TCR_49" style="width: 77px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCDW_49" style="width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_YQWCRQ_49" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_JCSJ_49" style="width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+		  <td ><span id="jDG_ZT_49" style="width: 72px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZDL_49" style="width: 87px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+         <td ><span id="jDG_XZXL_49" style="width: 48px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span></td>
+        
+         <!-- Grid Controls End   -->
+            </tr>
+            <tr style="display:none" class="RowEven">
+               <td><!-- 专门要来隐藏不要显示的数据列 -->
+			   <span id="jDG_TJDH_49" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+			   <span  id="jDG_ZGNR_49" style="width: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></span>
+            
+               </td>
+            </tr>
+      
+         </tbody>
+   <tfoot>
+      <tr class="RowOdd">       
+      <th id="jTtl_GCXM">001</th>
+      <th id="jTtl_SGDW">002</th>
+      <th id="jTtl_TCR">003</th>
+      <th id="jTtl_JCDW">004</th>
+      <th id="jTtl_YQWCRQ">aaa</th>
+      <th id="jTtl_JCSJ"></th>
+      <th id="jTtl_XZDL"></th>
+      <th id="jTtl_XZXL"></th>
+      <th id="jTtl_ZT"></th>
+            </tr>
+   </tfoot>
+      </table>
+
+		</td>
+		<td width="10%">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="10%">&nbsp;</td>
+		<td width="80%">&nbsp;</td>
+		<td width="10%">&nbsp;</td>
+	</tr>
+</table>
+
+ </BODY>
+</HTML>
