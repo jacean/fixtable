@@ -1,0 +1,87 @@
+/**
+
+*/
+img{
+    height: auto;
+}
+.table-container{
+    overflow-x: visible;
+    overflow-y: visible;
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+.table-container .table-td {
+    /*border-right: solid 1px;*/
+    border-top: solid 1px;
+    box-sizing: border-box;
+    white-space:nowrap; 
+}
+.table-content{
+    overflow-x: scroll;
+    position: absolute;
+    z-index: 10;
+    opacity: 1;
+}
+.table-middle{
+    overflow: hidden;
+}
+.table-left{
+    position: absolute;
+    top:0;
+    overflow-x: hidden;
+    overflow-y: hidden;    
+}
+.table-tr{    
+    overflow: hidden;
+    
+}
+.table-td{    
+    display: inline-block;
+   overflow: hidden;
+}
+.table-fix-col{
+    display: inline-block;
+    /*float: left;*/
+    border: 0;
+}
+.table-fix-row{
+
+}
+.table-attr-hide{
+    display: none;
+}
+.table-ctrl-hide{
+    display: none;    
+}
+.table-ctrl-hide-col{
+  display: none; 
+}
+.table-ctrl-hide-row{
+    display: none;    
+}
+.table-top{
+
+}
+.table-lt{
+    overflow: hidden;
+}
+.table-header{
+    overflow: hidden;
+    position: absolute;
+}
+.table-footer{
+
+}
+.table-td-hide{
+    position:relative;
+}
+.table-td-hide-mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    opacity: 1;
+    background-color: white;
+}
+
