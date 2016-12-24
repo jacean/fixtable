@@ -73,7 +73,9 @@
         this.colArray = this.getColArray();
         this.rowArray = this.getRowArray();
 
-        this.initDom();
+        if(!this.initDom()){
+            return null;
+        };
         //填充数据
         this.loadData();
 
@@ -100,7 +102,16 @@
     }
     FixTable.prototype = {
         initDom: function () {
-           
+           if(this.options.containerid==""){
+                this.$tableContainer =$('<div class="table-container"></div>');
+                this.$table.after(this.$tableContainer);
+            }else{
+                this.$tableContainer =$("#"+this.options.containerid)
+            }
+            if(this.$tableContainer.html()!=""){
+                console.log("容器不是空的，继续初始化会擦除掉原本内容");
+                return false;
+            }
             this.$tableContent = $('<div class="table-content"></div>');
             this.$table_attr_hide = $('<div class="table-attr-hide"></div>');
             this.$table_ctr_hide = $('<div class="table-ctrl-hide"></div>');
@@ -110,17 +121,12 @@
             this.$middle = $('<div class="table-middle"></div>');
 
             this.$middle.append(this.$tableleft).append(this.$tableContent);
-            if(this.options.containerid==""){
-                this.$tableContainer =$('<div class="table-container"></div>');
-                this.$table.after(this.$tableContainer);
-            }else{
-                this.$tableContainer =$("#"+this.options.containerid)
-            }
+            
             this.$tableContainer.append(this.$header).append(this.$middle).append(this.$tablelt);
             
 
             this.initContainer(this.options.customwidth, this.options.height);
-
+            return true;
         },
         getColArray: function () {
             var self = this;
