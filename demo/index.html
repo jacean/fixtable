@@ -16,7 +16,7 @@
 var VARIABLE;
       $(document).ready(function () {
             
-            initfixtable();
+            
       });
       
       function initfixtable(){
@@ -50,13 +50,38 @@ var VARIABLE;
             // VARIABLE.hidecell("jDGROW_2","SGDW")
             VARIABLE.hidecell("jDGROW_2","SGDW")
       }
-
+      function filldata(){
+            $table=VARIABLE.$tableContainer;
+            $table.find("span").show();
+            $tds=$table.find(".table-td");
+            $tds.each(function(){
+                  $(this).children().text("xxxxxxxxxxxxxxxxxxxxxxxxxx");
+            });
+            VARIABLE.refreshData();
+      }
+      function cleardata(){
+            $table=$("#jTbl_D_GRID");
+            $tds=$table.find("td");
+            $tds.each(function(){
+                  $(this).children().text("");
+            });
+            $table.find("span").hide();
+      };
       function removehidecell(){
             VARIABLE.removehidecell();
       }
       
 </script>
  <BODY>
+        <input type="button" value="init" onclick="initfixtable()">
+        <input type="button" value="Hide Row" onclick="hiderow('jDGROW_2');">
+ <input type="button" value="Fix Col" onclick="fixcol('SGDW');">
+ <input type="button" value="Hide Col" onclick="hidecol('SGDW');">
+ <input type="button" value="Hide Cell" onclick="hidecell('jDGROW_2','SGDW');">
+ <input type="button" value="UnHide Cell" onclick="removehidecell();">
+ <input type="button" value="Resize" onclick="setSize(800,600);">
+ <input type="button" value="refresh" onclick="filldata()">
+  <input type="button" value="cleardata" onclick="cleardata()">
        <!--del:第一列空列-->
   <table id="jTbl_D_GRID" class="grid" style="width: 1295px;" width="100%" cellspacing="0" cellpadding="0" border="0">
             <colgroup>

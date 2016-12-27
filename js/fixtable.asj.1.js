@@ -2,7 +2,7 @@
  * @Author: jacean.wanjq 
  * @Date: 2016-12-24 19:07:34 
  * @Last Modified by: jacean.wanjq
- * @Last Modified time: 2016-12-27 16:05:12
+ * @Last Modified time: 2016-12-26 10:09:59
  */
 
 
@@ -47,24 +47,7 @@
         }
         return scrollStatus;
     }
-    //解决IE10以下不支持Function.bind
-if (!Function.prototype.bind) {
-    Function.prototype.bind = function(oThis) {
-        if (typeof this !== "function") {
-            throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
-        }
-        var aArgs = Array.prototype.slice.call(arguments, 1),
-            fToBind = this,
-            fNOP = function() {},
-            fBound = function() {
-                return fToBind.apply(this instanceof fNOP && oThis ? this : oThis,
-                    aArgs.concat(Array.prototype.slice.call(arguments)));
-            };
-        fNOP.prototype = this.prototype;
-        fBound.prototype = new fNOP();
-        return fBound;
-    };
-}
+		 //ssj
     var FixTable = function (_$dom, _option) {
         if (_$dom.length < 1) {
             return;
@@ -190,15 +173,11 @@ if (!Function.prototype.bind) {
         getRowArray: function () {
             var self = this;
             var $trs = this.$table.find("thead tr,tbody tr:visible,tfoot tr");
-            //ie不支持tr:visible
-            $trs=$.grep($trs, function(n, i){
-                return $(n).css("display") !== 'none';
-            });
             //head和foot里是th，body里是td       
             var rowArray = new Array();
             var i = 0;
             var heights = 0;
-            $.each($trs,function(){
+            $trs.each(function () {
                 i++;
                 rowArray[i] = {
                     no: i,
@@ -207,15 +186,6 @@ if (!Function.prototype.bind) {
                 }
                 heights += $(this).height();
             });
-            // $trs.each(function () {
-            //     i++;
-            //     rowArray[i] = {
-            //         no: i,
-            //         id: this.id,
-            //         height: $(this).height()
-            //     }
-            //     heights += $(this).height();
-            // });
             rowArray[0] = {
                 rowsnum: i,
                 rowsheight: heights
@@ -227,6 +197,8 @@ if (!Function.prototype.bind) {
             var containerWidth = typeof customwidth == "undefined" ? window.innerWidth : customwidth;
             var colsWidth = this.colArray[0].colswidth,
                 rowsHeight = this.rowArray[0].rowsheight;
+			console.log(colsWidth);
+			console.log(containerWidth);
             if (colsWidth < containerWidth) {
                 scale = 1.0 * containerWidth / colsWidth;
             }
@@ -235,12 +207,15 @@ if (!Function.prototype.bind) {
             if (rowsHeight < containerHeight) {
                 containerHeight = rowsHeight;
             }
+			//console.log(containerWidth+":"+containerHeight);
             this.$tableContainer.height(containerHeight);
             this.scale = scale;
+			
         },
         /**
          * @return:this.scale
          */
+		 //ssj
         setContainerSize: function (customwidth, customHeight) {
             if (customwidth < this.point.x) {
                 console.log("宽度参数过小");
@@ -262,11 +237,11 @@ if (!Function.prototype.bind) {
         /* @ return {  }: 
         /*===========================    end   =================================*
         */
-        resizeContainer: function () {
+        resizeContainer: function (w,h) {
             //隐藏行后可能会出现内容过短的情况，此时需要减小容器高度
             var allwidth = this.$tableContainer.width();
-            // var allheight = this.$tableContainer.height();
-            var allheight = this.options.customHeight;//
+            var allheight = this.$tableContainer.height();
+            //var allheight = this.options.customHeight;//
             var realHeight = 0;
             var $contenttrs = this.$tableContent.find(".table-tr");
             $contenttrs.each(function () {
@@ -282,8 +257,8 @@ if (!Function.prototype.bind) {
             if (scrollStatus.x) {
                 realHeight += scrollStatus.xheight;
             }           
-
-            
+			console.log(this.scale);
+            this.setscale(['.table-td', '.table-tr', '.table-fix-col', '.table-fix-row'], this.scale);
             this.setLayout();
         },
         setLayout: function () {
@@ -302,24 +277,17 @@ if (!Function.prototype.bind) {
             this.$tableleft.height(this.$tableContent[0].clientHeight);
             this.$header.height(this.point.y);
             this.$tablelt.height(this.point.y)
+				if(this.scale>1){
+				//alert(1)
+				this.$tableContent.css({"overflow-x":"hidden"});
+			}
 
         },
-        fillblank:function(){
-            $spans=this.$tableContainer.find("span");
-            $spans.each(function(){
-                if($(this).html()==""){
-                    $(this).html("&nbsp;");
-                }
-                
-            });
-        },
+
         loadLayer: function () {
             //可以考虑header\body\footer分别加载
             var self = this;
             $trs = this.$table.find('thead tr,tbody tr:visible,tfoot tr');//1.3.2会自己加tbody
-             $trs=$.grep($trs, function(n, i){
-                return $(n).css("display") !== 'none';
-            });
             var $tds;
             var colwidth;
             var nowrow = 0;
@@ -330,7 +298,8 @@ if (!Function.prototype.bind) {
                 colsWidth = this.colArray[0].colswidth,
                 rownum = this.rowArray[0].rowsnum,
                 rowsHeight = this.rowArray[0].rowsheight;
-            $.each($trs,function(){
+
+            $trs.each(function () {
                 nowrow++;
                 nowcol = 0;
                 colwidth = 0;
@@ -339,9 +308,6 @@ if (!Function.prototype.bind) {
                 var $trdiv = $("<div class='table-tr '></div>");
                 var $hidetr = $("<div class='table-tr table-attr-hide'></div>");
                 $tds = $(this).children('td,th');
-                if($tds.length<1){
-                    return;
-                }
                 $tds.each(function () {
                     var $td = $(this);
                     var $tddiv;
@@ -359,8 +325,9 @@ if (!Function.prototype.bind) {
 
                     //  console.log(nowrow + "-" + nowcol + ":" + colwidth);
                     // tdheight=$td.css('height');
-                    tdheight = Math.max(tdheight, px2num($td.css('height')));
+//                    tdheight = Math.max(tdheight, px2num($td.css('height')));
 
+tdheight = Math.max(tdheight, $td.height());
                     if (nowrow == 1) {
                         $tddiv = $("<div class='table-td table-tr-" + nowrow + " table-td-" + nowcol + " table-td-header'></div>");
                     } else if (nowrow == rownum) {
@@ -383,13 +350,9 @@ if (!Function.prototype.bind) {
                 if (attrHideFlag) {
                     self.$table_attr_hide.append($hidetr);
                 }
-               
+
             });
 
-            // $trs.each(function () {
-               
-            // });
- this.fillblank();
         },
         /**
         /*===========================   start =================================*
@@ -422,6 +385,7 @@ if (!Function.prototype.bind) {
             }
             this.resizeContainer();
         },
+		 //ssj
         fixcols: function (_cols) {
             var cols = new Array();
             if (typeof _cols == "string") {
@@ -473,6 +437,7 @@ if (!Function.prototype.bind) {
             this.removemix(this.fixselector);
             this.setLayout();
         },
+		 //ssj
         fixrows: function (_rows) {
             var rows = new Array();
             if (typeof _rows == "string") {
@@ -535,6 +500,7 @@ if (!Function.prototype.bind) {
                 }
             };
         },
+		 //ssj
         hidecol: function (_cols) {
             var cols = new Array();
             if (typeof _cols == "string") {
@@ -593,16 +559,53 @@ if (!Function.prototype.bind) {
             if (_selectors instanceof Array) {
                 selectors = _selectors;
             }
+
+			var colall=this.colArray[0];
+		for(var i=0;i<colall.colsnum;i++){
+			$(".table-td-"+(i+1)).each(function(){
+				$(this).width(this.colArray[i+1].width* _scale);
+			});
+		}
+
+		$(".table-table-tr").each(function(){
+			var rl=0;
+			$(this).find(".table-td").each(function(){
+				rl+=$(this).width();
+			});			
+
+			$(this).width(rl);
+		});
+		$(".table-fix-col").each(function(){
+			$(this).width($(this).children().width());
+		});
+		$(".table-fix-row").each(function(){
+			var rl=0;
+			$(this).find(".table-td").each(function(){
+				rl+=$(this).width();
+			});			
+
+			$(this).width(rl);
+		});
+		/*
             var selslength = selectors.length;
             for (var i = 0; i < selslength; i++) {
                 this.$tableContainer.find(selectors[i]).each(function () {
-                    $(this).width($(this).width() * _scale);
-
+                    //$(this).width($(this).width() * _scale);
+					$(this).width(this.colArray[i+1].width* _scale);
                 });;
             }
-            this.point.x *= _scale;
-            this.setLayout();
+		*/
+            //this.point.x *= _scale;
+         var px=0;
+		 $(".table-fix-col").each(function(){
+			px+=$(this).width();
+		});
+			this.point.x=px;
+			
+			
+			this.setLayout();
         },
+		 //ssj
         hiderow: function (_rows) {
             var rows = new Array();
             if (typeof _rows == "string") {
@@ -640,43 +643,7 @@ if (!Function.prototype.bind) {
             }
             this.resizeContainer();
         },
-        removehiderow:function(_rows){
-            var rows = new Array();
-            if (typeof _rows == "string") {
-                if (_rows == "") return;
-                rows[0] = _rows;
-            }
-            if (_rows instanceof Array) {
-                rows = _rows;
-            }
-            var rowslength = rows.length;
-
-
-            //将选择器转换成fixtable可以识别的选择器
-            var rowArray = this.rowArray;
-            for (var x = 0; x < rowslength; x++) {
-                for (var j = 1; j < rowArray.length; j++) {
-                    if (rowArray[j].id == rows[x]) {
-                        // rows[x] = "#" + rowArray[j].fullid;//用id来进行选取
-                        rows[x] = ".table-tr-" + rowArray[j].no;
-                        break;
-                    }
-                }
-            }
-
-            var $hiderow;
-            for (var i = 0; i < rowslength; i++) {
-                var cw = 0;
-                var $sels = this.$tableContainer.find(rows[i]);
-                if ($sels.length == 0) {
-                    continue;
-                }
-                $sels.each(function () {
-                    $(this).removeClass('table-ctrl-hide-row');
-                });
-            }
-            this.resizeContainer();
-        },
+		 //ssj
         hidecell: function (r, c) {
             var colArray = this.colArray;
 

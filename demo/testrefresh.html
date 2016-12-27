@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script language=javascript src="../lib/jquery-1.3.2.js"></script>
+<!--<script language=javascript src="jquery-3.1.0.min.js"></script>-->
+<link rel="stylesheet" href="../css/JupiterBoot.css">
+<link rel="stylesheet" href="../css/fixtable.css">
+<script src="../js/fixtable.asj.js"></script>
+</head>
+<script type="text/javascript">
+  function CreateTable(rowCount,cellCount)
+  { 
+     var table=$("#aa");
+     tbody=$("<tbody></tbody>");
+     for(var i=0;i<rowCount;i++)
+     {
+        var tr=$("<tr></tr>");
+        tr.appendTo(tbody);
+        for(var j=0;j<cellCount;j++)
+        {
+           var td=$("<td>"+i+"-"+j+"</td>");
+           td.appendTo(tr);
+        }
+     }
+     tbody.appendTo(table);
+    
+  }
+
+</script>
+<script>
+var VARIABLE;
+      $(document).ready(function () {
+            
+            //initfixtable();
+      });
+      
+      function initfixtable(){
+            VARIABLE=$("#aa").fixtable({
+                  customwidth: 350,
+                  customHeight: 200,
+                  fixcol: ["XZXL", "YQWCRQ"],
+                  // hidecol: ["TCR","ZT"],
+                  hiderow: "jDGROW_0"
+            });
+      }
+      function setSize(w,h) {
+            // VARIABLE.setContainerSize(200, 200)
+             VARIABLE.setContainerSize(w, h)
+      }
+      function fixcol(id) {
+            // VARIABLE.fixcols("SGDW")
+            VARIABLE.fixcols(id)
+      }
+      function hiderow(id) {
+            // VARIABLE.hiderow("jDGROW_2")
+            VARIABLE.hiderow(id)
+      }
+      function hidecol(id) {
+
+            // VARIABLE.hidecol("SGDW")
+            VARIABLE.hidecol(id)
+      }
+      function hidecell(row, col) {
+
+            // VARIABLE.hidecell("jDGROW_2","SGDW")
+            VARIABLE.hidecell("jDGROW_2","SGDW")
+      }
+
+      function removehidecell(){
+            VARIABLE.removehidecell();
+      }
+      
+</script>
+</head>
+ 
+<body>
+    
+<input type="button" value="添加表格" onClick="CreateTable(15,20)" >
+    <input type="button" value="init" onclick="initfixtable()">
+     <input type="button" value="Hide Row" onclick="hiderow('jDGROW_2');">
+ <input type="button" value="Fix Col" onclick="fixcol('SGDW');">
+ <input type="button" value="Hide Col" onclick="hidecol('SGDW');">
+ <input type="button" value="Hide Cell" onclick="hidecell('jDGROW_2','SGDW');">
+ <input type="button" value="UnHide Cell" onclick="removehidecell();">
+ <input type="button" value="Resize" onclick="setSize(800,600);">
+<table id="aa" style="border: 1px solid"></table>
+</body>
+</html>
